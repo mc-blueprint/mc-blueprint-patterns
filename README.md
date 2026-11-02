@@ -20,3 +20,15 @@
 ## 状態
 
 設計段階。データの形式は mc-blueprint が定める。
+
+## データの検証
+
+Python 3.12 の一時仮想環境に、パターン形式の検証を含む mc-blueprint の固定 commit をインストールして実行する。
+
+様式の `roles` は generation-pipeline の生成役割名を使う。Palette の `stone_wall` は `wall_main`、`plaster` は `wall_secondary`、`timber`・柱は `frame`、窓枠は `window_frame`、`foundation`・`floor`・`roof` は同名の役割へ対応させる。庭石・砂利とデッキは `path` に対応させる。Modern の柱間は設計に明記がなく、スキーマで必須のため、記載された窓幅 3〜6 をグリッド幅として用いる。
+
+```powershell
+& 'C:\Users\ryuma\AppData\Local\Python\pythoncore-3.12-64\python.exe' -m venv ..\.venv
+..\.venv\Scripts\python.exe -m pip install "mc-blueprint @ git+https://github.com/mc-blueprint/mc-blueprint@9d4ec83d0306e4ec243b236d141226474ab01d0c"
+..\.venv\Scripts\mcblueprint.exe check --strict .
+```
