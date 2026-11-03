@@ -44,6 +44,8 @@ Python 3.12 の一時仮想環境に、パターン形式の検証を含む mc-b
 
 様式の `roles` は generation-pipeline の生成役割名を使う。Palette の `stone_wall` は `wall_main`、`plaster` は `wall_secondary`、`timber`・柱は `frame`、窓枠は `window_frame`、`foundation`・`floor`・`roof` は同名の役割へ対応させる。庭石・砂利とデッキは `path` に対応させる。Modern の柱間は設計に明記がなく、スキーマで必須のため、記載された窓幅 3〜6 をグリッド幅として用いる。
 
+`depth_layers` は外壁の frame・opening・cornice の奥行きを表す。`decoration.density` は装飾密度の許容範囲、`band_course` と `cornice` は各装飾要素の有無を表す。`modules` は bay・window・entrance・cornice・roof_edge の役割から同梱モジュールを参照し、すべて `modules/` 内に実在する必要がある。柱間は両端の柱間の座標差で扱うため、部品の X 寸法から1を引いた値を `grid.bay` と照合する。`metadata.dimensions` は各部品の用途に応じて柱間・階高・奥行き層の規則と照合する。japanese の柱間4と modern の flat 屋根は維持する。
+
 ```powershell
 & 'C:\Users\<user>\AppData\Local\Python\pythoncore-3.12-64\python.exe' -m venv ..\.venv
 ..\.venv\Scripts\python.exe -m pip install "mc-blueprint @ git+https://github.com/mc-blueprint/mc-blueprint@9d4ec83d0306e4ec243b236d141226474ab01d0c"
