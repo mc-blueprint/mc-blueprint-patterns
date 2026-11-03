@@ -21,6 +21,23 @@
 
 設計段階。データの形式は mc-blueprint が定める。
 
+## モジュール一覧
+
+| 様式 | 分類 | モジュール | 寸法（X×Y×Z） |
+|---|---|---|---|
+| medieval | ベイ | `medieval.bay_recessed` | 5×5×2 |
+| medieval | 入口 | `medieval.entry_portico` | 5×5×3 |
+| medieval | cornice/庇 | `medieval.stone_cornice` | 5×2×2 |
+| medieval | 屋根縁 | `medieval.gable_eave` | 7×3×2 |
+| japanese | ベイ | `japanese.engawa_bay` | 5×5×3 |
+| japanese | 入口 | `japanese.genkan_entry` | 5×4×3 |
+| japanese | 庇 | `japanese.noki_eave` | 5×2×2 |
+| japanese | 屋根縁 | `japanese.kawara_eave` | 7×3×2 |
+| modern | ベイ | `modern.glazed_bay` | 5×5×2 |
+| modern | 入口 | `modern.recessed_entry` | 5×4×3 |
+| modern | cornice | `modern.flat_cornice` | 5×2×2 |
+| modern | 屋根縁 | `modern.parapet_eave` | 5×2×2 |
+
 ## データの検証
 
 Python 3.12 の一時仮想環境に、パターン形式の検証を含む mc-blueprint の固定 commit をインストールして実行する。
