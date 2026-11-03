@@ -24,6 +24,7 @@ decoration:
   band_course: false
   cornice: true
 roles:
+  wall_main: [plaster, wood]
   wall_secondary: plaster
   frame: wood
   window_frame: wood

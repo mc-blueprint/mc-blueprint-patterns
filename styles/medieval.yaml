@@ -35,3 +35,4 @@ roles:
   window_frame: wood
   floor: wood
   roof: wood
+  path: [stone, sand]

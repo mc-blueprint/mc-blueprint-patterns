@@ -24,8 +24,10 @@ decoration:
   band_course: false
   cornice: true
 roles:
+  frame: [concrete, metal]
   wall_main: concrete
   wall_secondary: concrete
+  window_frame: metal
   floor: mineral
   foundation: stone
   roof: mineral
