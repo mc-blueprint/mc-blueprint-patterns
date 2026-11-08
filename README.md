@@ -51,7 +51,7 @@ Python 3.12 の一時仮想環境に、パターン形式の検証を含む mc-b
 `depth_layers` は外壁の frame・opening・cornice の奥行きを表す。`decoration.density` は許容範囲内の位置を表し、目標比率は `min + density × (max − min)` で求める。`band_course` と `cornice` は各装飾要素の有無を表す。`modules` は bay・window・entrance・cornice・roof_edge などの役割から同梱モジュールを参照し、すべて `modules/` 内に実在する必要がある。柱間は両端の柱間の座標差で扱うため、部品の X 寸法から1を引いた値を `grid.bay` と照合する。`metadata.dimensions` は各部品の用途に応じて柱間・階高・奥行き層の規則と照合する。japanese の柱間4と modern の flat 屋根を維持する。
 
 ```powershell
-& 'C:\Users\<user>\AppData\Local\Python\pythoncore-3.12-64\python.exe' -m venv ..\.venv
+py -3.12 -m venv ..\.venv
 ..\.venv\Scripts\python.exe -m pip install "mc-blueprint @ git+https://github.com/mc-blueprint/mc-blueprint@9d4ec83d0306e4ec243b236d141226474ab01d0c"
 ..\.venv\Scripts\mcblueprint.exe check --strict .
 ```
